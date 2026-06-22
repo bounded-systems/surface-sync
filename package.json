@@ -4,7 +4,10 @@
   "description": "Type ontology for work-unit change-detection across GH/branch/worktree/tmux/beads",
   "bounded": {
     "tagline": "Type ontology for work-unit change-detection across GH/branch/worktree/tmux/beads",
-    "kind": "room"
+    "kind": "room",
+    "facet": "verb",
+    "role": "transform",
+    "domain": "surfaces"
   },
   "license": "MIT",
   "type": "module",
