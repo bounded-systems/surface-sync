@@ -3,8 +3,16 @@
     "type": "name",
     "value": "Surface Sync"
   },
+  "tagline": {
+    "type": "tagline",
+    "value": "The type ontology for work-unit change-detection — the shared vocabulary for reconciling a unit's state across GitHub…"
+  },
   "description": {
     "type": "meta",
-    "value": "Type ontology for work-unit change-detection across GH/branch/worktree/tmux/beads"
+    "value": "The type ontology for work-unit change-detection — the shared vocabulary for reconciling a unit's state across GitHub, the branch, the worktree, tmux, and beads.  This package is mostly types: the surfaces a work unit presents on, the shape of a detected change, how changes ro…"
+  },
+  "keywords": {
+    "type": "body",
+    "value": "SURFACE-SYNC · CHANGE-DETECTION · WORK-UNIT · ONTOLOGY · DISPOSITION"
   }
 }
