@@ -1,6 +1,6 @@
 {
   "name": "@bounded-systems/surface-sync",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Type ontology for work-unit change-detection across GH/branch/worktree/tmux/beads",
   "bounded": {
     "tagline": "Type ontology for work-unit change-detection across GH/branch/worktree/tmux/beads",
@@ -54,6 +54,6 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@bounded-systems/disposition": "npm:@jsr/bounded-systems__disposition"
+    "@bounded-systems/disposition": "npm:@jsr/bounded-systems__disposition@^0.3.0"
   }
 }
