@@ -9,6 +9,7 @@
 
 import type { SurfaceSyncAuthorityFeature } from "./surface.ts";
 
+/** Maps branch prefixes to their authority surface (gh_issue or beads_issue). */
 export type PrefixRoutingConfig = {
   features: Record<string, SurfaceSyncAuthorityFeature>;
 };
@@ -17,6 +18,7 @@ const ROUTING_PREFIX_RE = /^([A-Z][A-Z0-9]+)-\d+$/;
 const BD_SHORT_SURFACE_RE = /^BD-[0-9A-F]{8}$/i;
 const BD_LONG_SURFACE_RE = /^BD-[A-Z][A-Z0-9-]*-\d{13,}-\d+-[0-9A-F]{8}$/i;
 
+/** Resolve the authority surface for a work-unit ID or branch name using prefix routing. */
 export function resolveFeatureForPrefix(
   branchOrWorkUnitId: string | null | undefined,
   config: PrefixRoutingConfig,

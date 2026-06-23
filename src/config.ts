@@ -8,6 +8,7 @@
 
 import type { SurfaceSyncFeature } from "./surface.ts";
 
+/** Configuration enabling or disabling each surface for reconciliation. */
 export type SurfaceSyncConfig = {
   features: Record<SurfaceSyncFeature, boolean>;
 };

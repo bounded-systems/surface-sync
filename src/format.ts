@@ -10,6 +10,7 @@
 
 import type { SurfaceSyncResult } from "./result.ts";
 
+/** Format a reconciliation plan as human-readable plain text or JSON. */
 export function formatSurfaceSync(summary: SurfaceSyncResult, format: "plain" | "json"): string {
   if (format === "json") {
     return JSON.stringify(summary, null, 2);

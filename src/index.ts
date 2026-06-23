@@ -15,6 +15,8 @@
  * Axes: surface → config → scope/mode/authority → action → result.
  */
 
+export type { Disposition } from "@bounded-systems/disposition";
+
 export type {
   SurfaceSyncDirection,
   SurfaceSyncFeature,

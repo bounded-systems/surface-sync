@@ -14,6 +14,7 @@ import type { Disposition } from "@bounded-systems/disposition";
 import type { SurfaceSyncAction } from "./action.ts";
 import type { SurfaceSyncAuthority, SurfaceSyncMode, SurfaceSyncScope } from "./scope.ts";
 
+/** The computed reconciliation plan: per-unit actions under a given mode/authority/scope. */
 export type SurfaceSyncResult = {
   source: "surface-sync";
   repo: string;
