@@ -39,6 +39,7 @@ export type BoardSnapshotUnit = {
   remote_branch_author?: { isOperator: boolean | null } | undefined;
 };
 
+/** Snapshot of a board's units: the state contract surface-sync transform consumes. */
 export type BoardSnapshot = {
   repo: string;
   units: BoardSnapshotUnit[];

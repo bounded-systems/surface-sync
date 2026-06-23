@@ -7,10 +7,11 @@
  * no runtime values live here).
  */
 
+/** The set of surfaces a work unit can synchronize across: GitHub issues, beads issues, project board items, merge state, and CI. */
 export type SurfaceSyncFeature = "gh_issue" | "beads_issue" | "project_item" | "merge_state" | "ci";
 
-// GH-2092: direction of bd↔gh issue-parity reconciliation. Names the
-// side(s) read authoritatively. Additive; not yet consumed at runtime.
+/** Direction of issue-parity reconciliation: beads→GitHub, GitHub→beads, or both. */
 export type SurfaceSyncDirection = "bd_to_gh" | "gh_to_bd" | "both";
 
+/** Authority surfaces for issue parity: GitHub issues or beads issues. */
 export type SurfaceSyncAuthorityFeature = Extract<SurfaceSyncFeature, "gh_issue" | "beads_issue">;

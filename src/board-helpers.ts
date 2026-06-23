@@ -10,6 +10,7 @@ import type { SurfaceSyncConfig } from "./config.ts";
 import type { SurfaceSyncAuthorityFeature, SurfaceSyncFeature } from "./surface.ts";
 import { resolveFeatureForPrefix, type PrefixRoutingConfig } from "./routing.ts";
 
+/** Check if a surface feature is enabled in the config. */
 export function issueParityFeatureEnabled(
   config: SurfaceSyncConfig,
   feature: SurfaceSyncFeature,
@@ -17,6 +18,7 @@ export function issueParityFeatureEnabled(
   return config.features[feature];
 }
 
+/** Resolve the authority surface for a unit's branch using prefix routing. */
 export function issueFeatureForUnit(
   branch: string,
   routingConfig: PrefixRoutingConfig,
@@ -24,6 +26,7 @@ export function issueFeatureForUnit(
   return resolveFeatureForPrefix(branch, routingConfig);
 }
 
+/** Extract the status value for a specific issue-authority feature from a unit's status. */
 export function issueFeatureStatus(
   status: NonNullable<BoardSnapshotUnit["status"]>,
   feature: Extract<SurfaceSyncFeature, "gh_issue" | "beads_issue"> | null,
@@ -37,6 +40,7 @@ export function issueFeatureStatus(
   return null;
 }
 
+/** Normalize raw issue status strings to one of: clean, dirty, completed, or disabled. */
 export function normalizeIssueStatus(
   raw: string | null,
   enabled: boolean,
@@ -48,6 +52,7 @@ export function normalizeIssueStatus(
   return "disabled";
 }
 
+/** Parse a GitHub issue number from a work-unit ID (GH-<number> format). */
 export function githubIssueNumberFromWorkUnitId(value: string): number | null {
   const match = value.match(/^GH-(\d+)$/);
   if (!match) {

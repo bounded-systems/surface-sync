@@ -29,6 +29,7 @@ function normalizeWorkUnitId(value: string): string {
   return value.trim().toUpperCase();
 }
 
+/** Compute the reconciliation plan given board state and configuration. */
 export function computeSurfaceSync(args: {
   board: BoardSnapshot;
   resolveBufferPath: () => string | null;
