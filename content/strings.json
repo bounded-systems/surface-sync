@@ -1,0 +1,10 @@
+{
+  "name": {
+    "type": "name",
+    "value": "Surface Sync"
+  },
+  "description": {
+    "type": "meta",
+    "value": "Type ontology for work-unit change-detection across GH/branch/worktree/tmux/beads"
+  }
+}
